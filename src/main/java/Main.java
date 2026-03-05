@@ -1,5 +1,6 @@
-import LeituraArquivoRetornoStrategy.LeituraArquivoRetornoBancoBrasil;
-import LeituraArquivoRetornoStrategy.LeituraArquivoRetornoBradesco;
+import leituraArquivoRetorno.LeituraArquivoRetornoBancoBrasil;
+import leituraArquivoRetorno.LeituraArquivoRetornoBradesco;
+import processador.ProcessadorBoletos;
 
 /*
     * Aluno: Juno Piazza Lopes

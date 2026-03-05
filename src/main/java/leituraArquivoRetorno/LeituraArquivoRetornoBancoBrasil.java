@@ -1,7 +1,7 @@
-package LeituraArquivoRetornoStrategy;
+package leituraArquivoRetorno;
 
 import java.time.LocalDate;
-import Entidades.Boleto;
+import entidades.Boleto;
 
 public class LeituraArquivoRetornoBancoBrasil extends LeituraArquivoRetornoTemplate {
 

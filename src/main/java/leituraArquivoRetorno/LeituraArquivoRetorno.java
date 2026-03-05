@@ -1,8 +1,8 @@
-package LeituraArquivoRetornoStrategy;
+package leituraArquivoRetorno;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import Entidades.Boleto;
+import entidades.Boleto;
 
 import static java.time.format.DateTimeFormatter.ofPattern;
 

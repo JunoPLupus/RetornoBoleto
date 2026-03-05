@@ -1,6 +1,6 @@
-package LeituraArquivoRetornoStrategy;
+package leituraArquivoRetorno;
 
-import Entidades.Boleto;
+import entidades.Boleto;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

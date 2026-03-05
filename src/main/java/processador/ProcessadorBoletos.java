@@ -1,5 +1,7 @@
-import Entidades.Boleto;
-import LeituraArquivoRetornoStrategy.LeituraArquivoRetorno;
+package processador;
+
+import entidades.Boleto;
+import leituraArquivoRetorno.LeituraArquivoRetorno;
 
 import java.util.List;
 
