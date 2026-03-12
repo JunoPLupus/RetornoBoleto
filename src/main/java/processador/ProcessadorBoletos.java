@@ -29,7 +29,6 @@ public class ProcessadorBoletos {
         for (Boleto boleto : boletos) {
             System.out.println(boleto);
         }
-        System.out.println("-----------------------------------------------");
     }
 
     public void processarBoleto(String nomeArquivo) {
