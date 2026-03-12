@@ -1,4 +1,4 @@
-![Java 25](https://img.shields.io/badge/Java-25-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Java 25](https://img.shields.io/badge/Java-25-333333?style=for-the-badge&logo=openjdk&logoColor=white&labelColor=ED8B00)
 ![Orientado à Objetos](https://img.shields.io/badge/Orientado_a_Objetos-252525?style=for-the-badge)
 
 # 📖 Sobre o Projeto
