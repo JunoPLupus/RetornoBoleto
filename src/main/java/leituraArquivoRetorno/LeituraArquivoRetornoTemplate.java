@@ -11,47 +11,41 @@ import java.util.List;
 
 abstract class LeituraArquivoRetornoTemplate implements LeituraArquivoRetorno {
 
-        @Override
-        public List<Boleto> lerArquivo(String nomeArquivo) {
-            System.out.println("\nLeitura do arquivo: " + nomeArquivo);
-            System.out.println("-----------------------------------------------");
+    protected abstract Boleto criarBoleto(String linha);
 
-            final List<String> linhasArquivo = lerLinhasArquivo(nomeArquivo);
-            List<Boleto> boletos = new ArrayList<>(linhasArquivo.size());
+    @Override
+    public List<Boleto> lerArquivo(String nomeArquivo) {
 
-            for (String linha : linhasArquivo) {
-                var boleto = criarBoleto(linha);
+        final List<String> linhasArquivo = lerLinhasArquivo(nomeArquivo);
+        List<Boleto> boletos = new ArrayList<>(linhasArquivo.size());
 
-                boletos.add(boleto);
-                System.out.println(boleto);
-            }
-            System.out.println("-----------------------------------------------");
-            return boletos;
+        for (String linha : linhasArquivo) {
+            var boleto = criarBoleto(linha);
+
+            boletos.add(boleto);
+        }
+        return boletos;
+    }
+
+    public List<String> lerLinhasArquivo(String nomeArquivo) {
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(nomeArquivo);
+
+        if(inputStream == null){
+            throw new RuntimeException("Arquivo não encontrado!");
         }
 
-        protected abstract Boleto criarBoleto(String linha);
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
 
-        public List<String> lerLinhasArquivo(String nomeArquivo) {
-            InputStream inputStream = getClass().getClassLoader().getResourceAsStream(nomeArquivo);
+            List<String> linhas = new ArrayList<>();
+            String linha;
 
-            if(inputStream == null){
-                throw new RuntimeException("Arquivo não encontrado!");
+            while ((linha = reader.readLine()) != null) {
+                if(!linha.isBlank()) linhas.add(linha);
             }
+            return linhas;
 
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
-
-                List<String> linhas = new ArrayList<>();
-                String linha;
-
-                while ((linha = reader.readLine()) != null) {
-                    if(!linha.isBlank()) linhas.add(linha);
-                }
-                return linhas;
-
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-
-
+    }
 }
