@@ -30,9 +30,8 @@ public class ProcessadorBoletos {
 
     public final void processar(String arquivo){
         List<Boleto> boletos = lerArquivo(arquivo);
-        for (Boleto boleto : boletos) {
-            System.out.println(boleto);
-        }
+
+        for (Boleto boleto : boletos) System.out.println(boleto);
     }
 
     private List<Boleto> lerArquivo(String nomeArquivo) {

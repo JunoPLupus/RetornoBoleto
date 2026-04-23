@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.edu.ifto</groupId>
-    <artifactId>retornoBoleto-OO</artifactId>
+    <artifactId>retornoBoleto-OO-template</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
