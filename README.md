@@ -9,11 +9,11 @@ Este projeto foi desenvolvido para a disciplina de Padrões de Projeto com o obj
 ## 🤯 Problema Inicial
 O projeto começou com a necessidade de criar um sistema de pagamento que pudesse suportar a leitura de arquivos de boletos de diferentes bancos, onde cada um usava diferentes campos.
 
-Para resolver essas questões reduzindo a duplicação de código e seguindo os princípios SOLID, foram utilizados padrões de projeto gradualmente.
+Para resolver essas questões reduzindo a duplicação de código e seguindo os princípios _SOLID_, foram utilizados padrões de projeto gradualmente.
 
 
-## Sobre as Implementações de Paradigmas
-A implementação OO tende a ser mais explícita e navegável — você vê a hierarquia de classes, sabe exatamente onde cada banco está implementado, é fácil de rastrear. Já a funcional tende a ser mais concisa, mas exige que o leitor entenda bem `Function<>` e composição de funções pra não parecer mágica.
+## ➿ Sobre as Implementações de Paradigmas
+A implementação _OO_ tende a ser mais explícita e navegável — você vê a hierarquia de classes, sabe exatamente onde cada banco está implementado, é fácil de rastrear. Já a funcional tende a ser mais concisa, mas exige que o leitor entenda bem `Function<>` e composição de funções pra não parecer mágica.
 
 Em aplicações maiores a diferença se acentua: o _OO_ escala bem quando você tem muitos comportamentos variando juntos (um banco novo provavelmente teria mais de um método diferente), enquanto o funcional escala bem quando os comportamentos são independentes e combináveis.
 
