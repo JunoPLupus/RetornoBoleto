@@ -14,7 +14,7 @@ abstract class LeituraArquivoRetornoTemplate implements LeituraArquivoRetorno {
     protected abstract Boleto criarBoleto(String linha);
 
     @Override
-    public List<Boleto> lerArquivo(String nomeArquivo) {
+    public final List<Boleto> lerArquivo(String nomeArquivo) {
 
         final List<String> linhasArquivo = lerLinhasArquivo(nomeArquivo);
         List<Boleto> boletos = new ArrayList<>(linhasArquivo.size());
@@ -27,7 +27,7 @@ abstract class LeituraArquivoRetornoTemplate implements LeituraArquivoRetorno {
         return boletos;
     }
 
-    public List<String> lerLinhasArquivo(String nomeArquivo) {
+    private List<String> lerLinhasArquivo(String nomeArquivo) {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(nomeArquivo);
 
         if(inputStream == null){
