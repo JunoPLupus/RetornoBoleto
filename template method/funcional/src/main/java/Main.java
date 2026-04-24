@@ -1,7 +1,9 @@
 import leituraArquivoRetorno.LeituraArquivoRetornoBancoBrasil;
 import leituraArquivoRetorno.LeituraArquivoRetornoBradesco;
 import processador.ProcessadorBoletos;
-
+/*
+    @author Juno Piazza Lopes
+ */
 static void main() {
     final var processador = new ProcessadorBoletos(
             LeituraArquivoRetornoBancoBrasil::criarBoleto);

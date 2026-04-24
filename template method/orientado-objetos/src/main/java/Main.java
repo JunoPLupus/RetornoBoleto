@@ -2,8 +2,7 @@ import leituraArquivoRetorno.LeituraArquivoRetornoBancoBrasil;
 import leituraArquivoRetorno.LeituraArquivoRetornoBradesco;
 import processador.ProcessadorBoletos;
 /*
-    * Aluno: Juno Piazza Lopes
-    * Padrões utilizados: Strategy e Template Method
+    @author Juno Piazza Lopes
  */
 public class Main {
     public static void main(String[] args) {
